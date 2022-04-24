@@ -25,13 +25,35 @@ Check this [link](https://developer.orange.com/apis/sms-sn/overview) to find the
 3. send sms with `sendSMS` function
 
 
-Exemple : [usageExample.java](/python/usageExample.py) | [usageExample.js](/javascript/usageExample.js)
+Exemple : [usageExample.java](/src/main/java/org/saafara/smsclient/orange/UsageExample.java)
 
 ### Java 📦  
 
 
 ```java
-// Java code example
+package org.saafara.smsclient.orange;
+
+// Example of usage of the SMSClient
+public class UsageExample {
+    public static void main(String[] args) {
+        String authHeaderValue = System.getenv("SMS_AUTH_HEADER_VALUE");
+
+        // create client
+        SMSClient client = new SMSClient(authHeaderValue);
+
+        // Show balance
+        System.out.println(client.getSMSBalance());
+
+        // Get purchase history
+        System.out.println(client.getSMSPurchaseHistory());
+
+        // Get SMS usage
+        System.out.println(client.getSMSUsages());
+
+        // Send SMS
+        client.sendSMS("2210000", "221771234569", "Hello world!");
+    }
+}
 ```
 
 ### Interfaces 📚 
@@ -42,28 +64,22 @@ Exemple : [usageExample.java](/python/usageExample.py) | [usageExample.js](/java
       - senderAddress
       - receiverAddress
       - message
-      - token
-  - return
+  - return (String)
       - response
  
- - **getToken** : to get token
-    - params :
-        - token
-     - return :
-        - token
 
- - **showBalanceSMS** : to show balance
-    - params :
-        - token
-     - return :
+ - **showSMSBalance** : to show balance
+     - return (String)
         - balance
 
  - **getUsageStats** : to get usage stats
-    - params :
-        - token
-     - return :
+     - return (String)
         - stats
 
+- **getPurchaseHistory** : to get purchase history
+     - return (String)
+        - history
+       
 #### Contributing 🤝
 
 Bug reports and Pull Requests are welcome 👋🏽  
