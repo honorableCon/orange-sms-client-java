@@ -6,14 +6,30 @@
 
     <groupId>org.saafara.smsclient</groupId>
     <artifactId>orange</artifactId>
-    <version>1.0</version>
-    <dependencies>
-    </dependencies>
+    <version>0.1.0</version>
     <packaging>jar</packaging>
 
+    <name>Orange SMS Client</name>
+    <description>A simple SMS client for Orange</description>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
+        <maven.compiler.target>11</maven.compiler.target>
     </properties>
+
+    <distributionManagement>
+       <repository>
+         <id>github</id>
+         <name>GitHub honorableCon Apache Maven Packages</name>
+         <url>https://maven.pkg.github.com/honorableCon/orange-sms-client-java</url>
+       </repository>
+    </distributionManagement>
 
 </project>

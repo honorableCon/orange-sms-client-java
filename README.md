@@ -16,6 +16,18 @@ Check this [link](https://developer.orange.com/apis/sms-sn/overview) to find the
 
 ## Install 📥
 ### Maven
+Add this to your pom.xml
+
+```xml
+<dependency>
+  <groupId>org.saafara.smsclient</groupId>
+  <artifactId>orange</artifactId>
+  <version>0.1.0</version>
+</dependency> 
+```
+```bash
+$ mvn install
+```
 
 ## Usage ✅
 
