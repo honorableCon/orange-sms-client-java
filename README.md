@@ -43,7 +43,7 @@ Exemple : [usageExample.java](/src/main/java/org/saafara/smsclient/orange/UsageE
 
 
 ```java
-package org.saafara.smsclient.orange;
+import org.saafara.smsclient.orange;
 
 // Example of usage of the SMSClient
 public class UsageExample {
